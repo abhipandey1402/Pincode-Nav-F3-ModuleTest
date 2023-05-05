@@ -98,8 +98,9 @@ async function fetchPostOffices(pincode) {
 }
 
 function showPO(filteredPO) {
+    let result = '';
     filteredPO.forEach((po) => {
-        document.getElementById('bottomBox').innerHTML += `<div id="poBox">
+        result += `<div id="poBox">
         <div>
             Name: ${po.Name}
         </div>
@@ -117,11 +118,15 @@ function showPO(filteredPO) {
         </div>
         </div>`
     });
+    document.getElementById('bottomBox').innerHTML = result;
 }
 
 document.getElementById('filter').addEventListener('input', () => {
     let filteredPO = POArr.filter((ele) => {
-        ele.Name.toLowerCase().includes(document.getElementById("filter").value.toLowerCase())
+        if (ele.Name.toLowerCase().includes(document.getElementById('filter').value.trim().toLowerCase()) || ele.BranchType.toLowerCase().includes(document.getElementById('filter').value.trim().toLowerCase())) {
+            return ele;
+        }
     });
     showPO(filteredPO);
 });
+
