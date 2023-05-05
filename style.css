@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@200&family=Quattrocento&family=Ruda&display=swap');
+
+body {
+    margin: 3vw;
+    font-family: inter;
+    max-width: 100%;
+}
+
+#ip {
+    font-size: 3vw;
+}
+
+#getdataBtn {
+    background-color: #000;
+    color: #fff;
+    padding: 1vw;
+    width: 10vw;
+    border: none;
+    border-radius: 1vw;
+}
+
+#getdataBtn {
+    cursor: pointer;
+
+}
+
+#head {
+    font-size: 2vw;
+    font-weight: 700;
+    display: flex;
+    justify-content: space-between;
+}
+
+#head div {
+    padding: 0.5vw 0vw;
+}
+
+#mapBox {
+    width: 100%;
+    margin-top: 1vw;
+    margin-bottom: 1vw;
+}
+
+#midBox {
+    display: flex;
+    flex-direction: column;
+    gap: 1vw;
+    font-weight: 700;
+}
+
+#filter {
+    width: 97%;
+    padding: 1vw;
+    margin-bottom: 2vw;
+    margin-top: 2vw;
+    font-weight: 700;
+    border-color: #000;
+    border-radius: 0.6vw;
+    display: none;
+    box-shadow: none;
+}
+
+#bottomBox {
+    margin-top: 2vw;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    row-gap: 2vw;
+}
+
+#poBox {
+    border: 2px solid #000;
+    width: 28%;
+    padding: 1.5vw;
+    display: flex;
+    flex-flow: column wrap;
+    gap: 0.5vw;
+    border-radius: 0.6vw;
+    font-weight: 900;
+}
